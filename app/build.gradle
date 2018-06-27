@@ -7,7 +7,7 @@ def gitUrl = 'https://github.com/huzipiaopiao/FlowViewGroup.git'   // Git仓库�
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-version = "1.0.1" //发布版本号
+version = "1.0.5" //发布版本号
 group = "com.teaanddogdog" //最终引用形式，如compile 'com.leon.lfilepicker:1.0.0'，其中lfilepicker在后面配置
 
 //配置参照的：https://www.jianshu.com/p/b5d3462407fc
@@ -44,18 +44,18 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = 'flowViewGroup'//自己创建的仓库名字
-        name = 'flowViewGroup'//发布到JCenter上的项目名字   项目名字，而非库名字
+        name = 'flowViewGroup'//发布到JCenter上的项目名字   （仓库下的package名字，一个仓库下可以有多个package)
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ['MIT']//不能随便写，只能是仓库创建时选择的license type
         publish = true // 是否是公开项目，公开别人可以引用
-        userOrg = 'teadoglibrary' //自己创建的organization名称(好像可以省略)
+        userOrg = 'teadoglibrary' //(项目拥有者，可以省略，如果省略应该就是个人下面的仓库了)
 
-        version {
-            name = '1.0.1'
-            desc = 'flowViewGroup.'//描述，自己定义
-            released  = new Date()
-            vcsTag = 'v1.0.1'
+        version{
+            name = project.getVersion()
+            vcsTag = "v${project.getVersion()}"
+            desc = 'remove some files'//描述，自己定义
+            released = new Date()
             attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
     }
@@ -113,7 +113,7 @@ artifacts {
 }
 
 javadoc {
-    options{
+    options {
         //如果你的项目里面有中文注释的话，必须将格式设置为UTF-8，不然会出现乱码
         encoding "UTF-8"
         charSet 'UTF-8'
