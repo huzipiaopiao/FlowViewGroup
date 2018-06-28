@@ -7,7 +7,7 @@ def gitUrl = 'https://github.com/huzipiaopiao/FlowViewGroup.git'   // Git仓库�
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-version = "1.0.5" //发布版本号
+version = "1.0.6" //发布版本号
 group = "com.teaanddogdog" //最终引用形式，如compile 'com.leon.lfilepicker:1.0.0'，其中lfilepicker在后面配置
 
 //配置参照的：https://www.jianshu.com/p/b5d3462407fc
@@ -54,7 +54,7 @@ bintray {
         version{
             name = project.getVersion()
             vcsTag = "v${project.getVersion()}"
-            desc = 'remove some files'//描述，自己定义
+            desc = 'rename the package name'//描述，自己定义
             released = new Date()
             attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
         }
