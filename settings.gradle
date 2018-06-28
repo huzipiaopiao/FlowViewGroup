@@ -1,1 +1,1 @@
-include ':flowviewgroup'
+include ':flowviewgroup', ':demo'
