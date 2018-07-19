@@ -1,19 +1,17 @@
 # FlowViewGroup
-[ ![FlowViewGroup](https://api.bintray.com/packages/teadoglibrary/flowViewGroup/flowViewGroup/images/download.svg) ](https://bintray.com/teadoglibrary/flowViewGroup/flowViewGroup/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/teadoglibrary/flowViewGroup/flowViewGroup/images/download.svg) ](https://bintray.com/teadoglibrary/flowViewGroup/flowViewGroup/_latestVersion)
 
-流式布局，自动换行，测试阶段
+流式布局，自动换行
 
 # 使用方法：
 ## 1、依赖配置
 在项目最外面的build.gradle文件中，allprojects节点下的repositories中添加：
-```
-maven {
-            url  "https://dl.bintray.com/teadoglibrary/flowViewGroup"
-        }
-```
+
+    maven {  url  "https://dl.bintray.com/teadoglibrary/flowViewGroup" }
+    
 再在app的build.gradle文件中，dependencies节点下添加：
 
-`compile 'com.teaanddogdog:flowviewgroup:1.0.6'`
+    compile 'com.teaanddogdog:flowviewgroup:1.0.6'
 
 版本建议根据最新版本修改
 
