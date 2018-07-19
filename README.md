@@ -79,4 +79,6 @@
 
         </com.teaanddogdog.flowviewgroup.AutoNewLineViewGroup>
 ```
+
+## 3、效果
 ![图片](https://github.com/huzipiaopiao/FlowViewGroup/blob/master/img/demo_img1.png)
